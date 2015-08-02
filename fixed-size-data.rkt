@@ -21,3 +21,25 @@
 (/ 4 6)
 
 (sqrt 2)
+
+
+
+
+(define x 12)
+(define y 5)
+
+(sqrt (+ (sqr x) (sqr y)))
+
+
+;1.2 The Arithmetic of Strings
+
+(string-append "what a " "lovely " "day" "for learning BSL")
+
+;(== (string-append "a" "b") "ab")
+
+(define prefix "hello")
+(define suffix "world")
+
+(string-append prefix "_" suffix)
+
+; 1.3 Mixing It up
