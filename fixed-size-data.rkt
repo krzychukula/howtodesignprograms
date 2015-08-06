@@ -43,3 +43,16 @@
 (string-append prefix "_" suffix)
 
 ; 1.3 Mixing It up
+
+(+ (string-length "hello world") 60)
+;71
+
+(+ (string-length (number->string 42)) 2)
+; 4
+
+;(+ (string-length 4) 1)
+;string-length: expects a string, given 4
+
+
+
+
