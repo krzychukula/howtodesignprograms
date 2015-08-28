@@ -56,3 +56,25 @@
     [else "closing in"]))
 
 (main 0)
+
+
+; Solution
+; WorldState -> Image
+; adds a status line to the scene create by render  
+ 
+(check-expect (render/status 42)
+              (place-image (text "descending" 11 "green")
+                           20 20
+                           (render 42)))
+ 
+(define (render/status y)
+  (place-image
+    (cond
+      [(<= 0 y CLOSE)
+       (text "descending" 11 "green")]
+      [(and (< CLOSE y) (<= y HEIGHT))
+       (text "closing in" 11 "orange")]
+      [(> y HEIGHT)
+       (text "landed" 11 "red")])
+    20 20
+    (render y)))
