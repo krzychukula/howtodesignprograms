@@ -9,3 +9,16 @@
 (new-posn? (make-new-posn 1 2))
 
 
+; STRUCT entry
+(define-struct entry [name phone email])
+
+(define pl
+  (make-entry "Sarah Lee" "666-7771" "lee@classy-university.edu"))
+ 
+(define bh
+  (make-entry "Tara Harper" "666-7770" "harper@small-college.edu"))
+
+(entry-name pl)
+(entry-name bh)
+(entry-email pl)
+(entry-phone pl)
