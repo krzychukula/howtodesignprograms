@@ -17,3 +17,37 @@
 ; A Phone# is a structure: (make-phone# Number String Number)
 ; interpretation creates phone number with area switch and number
 
+
+
+;Exercise 73. Design the function posn-up-x, which consumes a Posn p and a Number n. It produces a Posn like p with n in the x field.
+
+;A neat observation is that we can define x+ using posn-up-x:
+(define (x+ p)
+  (posn-up-x p (+ (posn-x p) 3)))
+;Note Functions such as posn-up-x are called updaters functional setters. They are extremely useful when you write large programs. image
+
+; Posn Number -> Posn
+; increase x-coordinate by n
+(check-expect (posn-up-x (make-posn 0 0) 3) (make-posn 3 0))
+(define (posn-up-x p n)
+  (make-posn (+ (posn-x p) n) (posn-y p)))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
